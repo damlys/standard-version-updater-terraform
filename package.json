@@ -1,0 +1,50 @@
+{
+  "name": "@damlys/standard-version-updater-terraform",
+  "version": "1.0.0-0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "The conventional-changelog/standard-version updater for Terraform .tfvars files.",
+  "keywords": [
+    "conventional-changelog",
+    "standard-version",
+    "standard-version-updater",
+    "terraform",
+    "tf",
+    "tfvars",
+    "updater"
+  ],
+  "author": "Damian Łysiak",
+  "contributors": [],
+  "license": "UNLICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damlys/standard-version-updater-terraform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damlys/standard-version-updater-terraform/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/tfvars.js",
+  "types": "dist/tfvars.d.ts",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=5.6.0"
+  },
+  "devDependencies": {
+    "@damlys/ts-sdk": "^1.0.1"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint './**/*.{ts,tsx}' --fix",
+    "lint:check": "eslint './**/*.{ts,tsx}'",
+    "test": "jest --verbose",
+    "test:coverage": "rm -rf ./coverage && jest --coverage",
+    "test:watch": "jest --watchAll"
+  }
+}
